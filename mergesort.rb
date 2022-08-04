@@ -12,6 +12,7 @@ def merge(l, r)
   sorted.push(l) unless l.size.zero?
   sorted.push(r) unless r.size.zero?
 
+  sorted.flatten
 end
 
 def msort(list)
@@ -25,5 +26,9 @@ def msort(list)
   merge(l, r)
 end
 
-
-msort([1,5,3,6,8,3,2,8,1,3])
+unsorted = [1,5,3,6,8,3,2,8,1,3]
+p "before sorting:"
+pp unsorted
+puts "\nAfter sorting:"
+sorted = msort(unsorted)
+pp sorted
